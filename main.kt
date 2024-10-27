@@ -1,8 +1,16 @@
 fun main(args: Array<String>) {
     println("Hello, World!")
 
-    val bankAccount = BankAccount()
-    bankAccount.deposit(100.0)
-    bankAccount.withdraw(50.0)
-    bankAccount.getBalance() // 50.0
+    // Null Safety
+    var nonNullString: String = "This is a non-null string"
+    var nullableString: String? = null
+
+    // Safe Call Operator
+    println(nonNullString.length)
+    println(nullableString?.length)
+
+    // Elvis Operator
+    var length = nullableString?.length ?: 0
+    println(length)
+
 }
